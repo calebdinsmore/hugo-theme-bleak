@@ -105,7 +105,6 @@ p {
   margin: 2em auto;
 }
 
-
 li {
   position: relative;
 }
@@ -1509,6 +1508,9 @@ body {
 
     .post-excerpt {
       margin: 0;
+      p {
+        margin: 1em 0;
+      }
     }
 
     .post-more {

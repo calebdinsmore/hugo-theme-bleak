@@ -11,10 +11,12 @@
 		</figure>
 		{{ end }}
 		<span class="post-meta">
-			<span class="post-date">{{ .Date.Format "2 Jan 2006" }}</span>
+			<time datetime="{{ .Date }}" class="post-date">{{ .Date.Format "2 Jan 2006" }}</time>
 		</span>
 		<h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-		<p class="post-excerpt">{{ .Summary }}</p>
+		<div class="post-excerpt">
+			{{ if .Description }}{{ .Description | markdownify }}{{ else }}{{ .Summary }}{{ end }}
+		</div>
 		<span class="post-more"><a href="{{ .Permalink }}">Read more <i class="fa fa-angle-right"></i></a></span>
 	</div>
 </article>

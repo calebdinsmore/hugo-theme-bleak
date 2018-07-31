@@ -17,7 +17,6 @@
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-postcss": "^0.8.0",
-    "grunt-sass": "^2.0.0",
     "load-grunt-tasks": "^3.5.2"
   },
   "dependencies": {
@@ -33,7 +32,9 @@
     "@bower_components/masonry": "desandro/masonry#~4.1.1",
     "@bower_components/normalize.css": "necolas/normalize.css#~5.0.0",
     "@bower_components/nprogress": "rstacruz/nprogress#~0.2.0",
-    "@bower_components/outlayer": "metafizzy/outlayer#^2.1.0"
+    "@bower_components/outlayer": "metafizzy/outlayer#^2.1.0",
+    "grunt-sass": "^3.0.1",
+    "node-sass": "^4.9.2"
   },
   "engines": {
     "yarn": ">= 1.0.0"

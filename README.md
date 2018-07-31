@@ -45,24 +45,8 @@ Theme based from Ghost [Bleak](https://github.com/zutrinken/bleak) by [zutrinken
 
 ## Development
 
-Install [Grunt](http://gruntjs.com/getting-started/):
-
-	npm install -g grunt-cli
-
-Install Grunt modules:
-
-	npm install
-
-Install [Bower](http://bower.io):
-
-	npm install -g bower
-
-Install Bower components:
-
-	bower install
-
-Build Grunt project:
-
+	yarn global add grunt-cli
+	yarn
 	grunt
 
 Distribute Grunt project:

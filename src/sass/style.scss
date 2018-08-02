@@ -1113,6 +1113,26 @@ body {
       border-bottom: 4px solid $color-primary-default;
      }
   }
+
+  #front-page-menu {
+    z-index: 50;
+    text-align: center;
+    margin-top: 40px;
+    list-style: none;
+
+    .menu-list-item {
+      display: inline;
+      background-color: white;
+      border-radius: 4em;
+      padding: 0.80em 1.25em;
+      margin: 0 1em;
+
+      &:hover,
+      &:focus {
+        color: $color-gray-15;
+      }
+    }
+  }
 }
 
 
@@ -1214,6 +1234,10 @@ body {
       margin: 0;
       padding: 0;
     }
+  }
+
+  .hero {
+    
   }
 
   .post-meta {

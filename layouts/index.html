@@ -9,6 +9,7 @@
 				{{ end }}
 			</a>
 		</div>
+		{{ partial "front-page-menu.html" . }}
 		{{ if .Site.Params.cover }}
 		<div class="header-cover blured-image" style="background-color: #19a0d7; background-image: url(/images/cover.low.jpg)" data-src="{{ .Site.BaseURL }}/{{ .Site.Params.cover }}"></div>
 		{{ end }}

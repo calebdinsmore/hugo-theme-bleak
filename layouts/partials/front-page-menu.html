@@ -1,0 +1,7 @@
+{{ if .Site.Menus.frontpage }}
+<ul id="front-page-menu" class="inner" role="navigation">
+  {{ range .Site.Menus.frontpage }}{{ $currentNode := . }}
+    <li><a class="menu-list-item" href="{{ .URL }}">{{ .Pre }}<span>{{ .Name }}</span>{{ .Post }}</a>
+  {{ end }}
+</ul>
+{{ end }}

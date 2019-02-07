@@ -52,6 +52,8 @@
       {{ end }}
         </footer>
 
+      {{ partial "author.html" . }}
+
       {{ if ne .Type "page" }}
         {{ partial "comments.html" . }}
       {{ end }}
@@ -80,8 +82,6 @@
         {{ end }}
         <div class="clear"></div>
       </nav>
-    
-      {{ partial "author.html" . }}
     </div>
   </article>
 </main>

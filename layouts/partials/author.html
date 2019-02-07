@@ -1,8 +1,19 @@
-<div itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <h5>A propos de l'auteur</h5>
-  <section>
-    <p><a href="http://profiles.google.com/thibault.normand?rel=author" itemprop="name" rel="author">Thibault Normand</a> est un dévéloppeur et un bloggeur enthousiaste, curieux de toutes nouvelles technologies liées à la sécurité, l'architecture, et le
-      web. <a href="http://zenithar.org/" rel="me">Plus d'infos...</a>
+<aside class="post-author">
+  <figure class="post-author-avatar avatar">
+      <img src="//www.gravatar.com/avatar/{{ .Site.Params.author.gravatarHash }}?s&#x3D;250&amp;d&#x3D;mm&amp;r&#x3D;x" alt="{{ .Site.Params.author.userName }}" />
+  </figure>
+  <div class="post-author-bio">
+    <h4 class="post-author-name"><a href="/author/calebdinsmore/">Caleb Dinsmore</a></h4>
+    <p class="post-author-meta">
+      <span class="post-author-meta-location"><i class="fa fa-map-marker"></i> Indianapolis</span>
+      {{ if .Site.Params.author.github }}
+        <span class="post-author-meta-github"><i class="fa fa-github"></i> <a href="{{ .Site.Params.author.github }}">GitHub</a></span>
+	    {{ end }}
+      {{ if .Site.Params.author.linkedin }}
+        <span class="post-author-meta-linkedin"><i class="fa fa-linkedin"></i> <a href="{{ .Site.Params.author.linkedin }}">LinkedIn</a></span>
+	    {{ end }}
     </p>
-  </section>
-</div>
+      <p class="post-author-about">{{ .Site.Params.author.aboutBlurb }}</p>
+  </div>
+  <div class="clear"></div>
+</aside>

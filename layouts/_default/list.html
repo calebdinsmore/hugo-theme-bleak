@@ -20,7 +20,7 @@
 
 			{{ $paginator := .Paginator }}
 
-			{{ range $index, $page := .Paginator.Pages }}
+			{{ range .Paginator.Pages }}
 			  {{ .Render "li" }}
 			{{ end }}
 

@@ -2,12 +2,22 @@
 
 	<header id="header" class="header{{ if .Site.Params.cover }} has-cover{{ end }}">
 		<div class="inner">
-			<a class="header-title" href="{{ .Site.BaseURL }}">
+			<span class="header-title">
+				<figure class="header-image avatar">
+						<img src="//www.gravatar.com/avatar/{{ .Site.Params.author.gravatarHash }}?s&#x3D;250&amp;d&#x3D;mm&amp;r&#x3D;x" alt="{{ .Site.Params.author.userName }}" />
+				</figure>
 				<h1 class="header-name">{{ .Site.Title }}</h1>
-				{{ if .Site.Params.Subtitle }}
 					<span class="header-description">{{ .Site.Params.Subtitle }}</span>
-				{{ end }}
-			</a>
+				<span class="header-meta">
+					<span><i class="fa fa-map-marker"></i> Indianapolis</span>
+					{{ if .Site.Params.author.github }}
+					<span class="post-author-meta-github"><i class="fa fa-github"></i> <a href="{{ .Site.Params.author.github }}">GitHub</a></span>
+					{{ end }}
+				{{ if .Site.Params.author.linkedin }}
+					<span class="post-author-meta-linkedin"><i class="fa fa-linkedin"></i> <a href="{{ .Site.Params.author.linkedin }}">LinkedIn</a></span>
+					{{ end }}
+				</span>
+			</span>
 		</div>
 		{{ partial "front-page-menu.html" . }}
 		{{ if .Site.Params.cover }}

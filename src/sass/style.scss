@@ -6,10 +6,10 @@ $breakpoint-phone: 30em;
 $breakpoint-tablet: 50em;
 $breakpoint-desktop: 70em;
 
-$color-blue: #92CDCF;
-$color-blue-dark: #445878;
+$color-blue: #2980B9;
+$color-blue-dark: #2C3E50;
 
-$color-yellow-100: #FFC336;
+$color-yellow-100: #E74C3C;
 
 $color-gray-97: #F2F3F5;
 $color-gray-90: #E1E2E6;
@@ -1054,8 +1054,40 @@ body {
     }
   }
 
-  &.has-cover {
+  .avatar {
+    position: relative;
+    overflow: hidden;
+    background: #E1E2E6;
 
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      width: 50%;
+      height: 50%;
+      bottom: 35%;
+      left: 25%;
+      border-radius: 100%;
+      background: #D4D5D9;
+    }
+
+    &:after {
+      width: 100%;
+      bottom: -25%;
+      left: 0;
+    }
+
+    img {
+      position: relative;
+      z-index: 2;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &.has-cover {
     .header-image {
       border-color: #fff;
     }
@@ -1073,6 +1105,7 @@ body {
     span {
       font-weight: 400;
       color: $color-gray-40;
+      margin-left: 1em;
       margin-right: 1em;
 
       a {
